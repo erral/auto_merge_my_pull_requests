@@ -1,6 +1,6 @@
 FROM python:3-alpine
 
-MAINTAINER Alex Chan <alex@alexwlchan.net>
+MAINTAINER Mikel Larreategi <larreategi@eibar.org>
 
 LABEL "com.github.actions.name"="Auto-merge my pull requests"
 LABEL "com.github.actions.description"="Merge and clean-up the pull request after the checks pass"
