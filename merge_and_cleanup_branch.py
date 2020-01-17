@@ -97,10 +97,15 @@ if __name__ == '__main__':
 
     pr_user = pr_data["user"]["login"]
     print(f"*** This PR was opened by {pr_user}")
-    if pr_user != "alexwlchan":
+    if pr_user not in ["erral", "github-actions"]:
         print("*** This PR was opened by somebody who isn't me; requires manual merge")
         neutral_exit()
-
+   
+    if not pull_request["head"]["repo"]["url"].startswith("https://api.github.com/repos/erral/):
+        print("*** This PR was opened from a repo that is not mine")
+        neutral_exit()
+                                                          
+        
     print("*** This PR is ready to be merged.")
     merge_url = pull_request["url"] + "/merge"
     sess.put(merge_url)
