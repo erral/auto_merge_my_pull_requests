@@ -101,7 +101,7 @@ if __name__ == '__main__':
         print("*** This PR was opened by somebody who isn't me; requires manual merge")
         neutral_exit()
    
-    if not pull_request["head"]["repo"]["url"].startswith("https://api.github.com/repos/erral/):
+    if not pull_request["head"]["repo"]["url"].startswith("https://api.github.com/repos/erral/"):
         print("*** This PR was opened from a repo that is not mine")
         neutral_exit()
                                                           
